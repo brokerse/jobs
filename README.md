@@ -1,8 +1,4 @@
-# JOBS 2018 
+# Em construção
 
-## More details soon.
-
-![](https://media.giphy.com/media/OOJycWOEgp8FW/giphy.gif)
-
-[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/clubinvest/clubinvest)
-[![Linkedin]()](https://www.linkedin.com/company/clubinvest-brasil/)
+# Vagas
+https://github.com/brokerse/jobs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc

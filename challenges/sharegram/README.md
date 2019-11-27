@@ -27,7 +27,7 @@ yarn install
 <img src="https://user-images.githubusercontent.com/5496931/69729639-709bf880-1105-11ea-9463-2af50e55dba8.png">
 
 ### Boilerplate
-<img src="https://user-images.githubusercontent.com/5496931/69729639-709bf880-1105-11ea-9463-2af50e55dba8.png">
+<img src="https://user-images.githubusercontent.com/5496931/69740154-b19d0880-1117-11ea-966c-f16ef2a2f0f2.png">
 
 ## Author
 

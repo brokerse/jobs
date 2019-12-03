@@ -2,9 +2,14 @@
   "name": "sharegram-graphql",
   "version": "0.1.0",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
+    "esm": "^3.2.25",
+    "graphql": "^14.5.8",
     "graphql-yoga": "1.18.3",
-    "nexus": "0.12.0-rc.5"
+    "lodash": "^4.17.15",
+    "nexus": "0.12.0-rc.5",
+    "nodemon": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
@@ -16,6 +21,7 @@
   "scripts": {
     "clear": "rm -rf node_modules yarn.lock yarn-error.log && yarn install",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly ./src",
-    "port": "kill -9 $(lsof -t -i:4000)"
+    "port": "kill -9 $(lsof -t -i:4000)",
+    "start": "nodemon src/index.ts"
   }
 }

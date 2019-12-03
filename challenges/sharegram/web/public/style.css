@@ -1,0 +1,174 @@
+.divider {
+  border-bottom: 0.6px solid #dbdbdb 0.2;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (min-width: 723px) {
+  .header-content {
+    max-width: 923px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 723px) {
+  .col2 {
+    position: absolute;
+    top: -15px;
+    z-index: 2;
+  }
+
+  .cols-container {
+    position: relative;
+  }
+
+  .col1 {
+    margin-top: 20px;
+    padding-top: 13%;
+  }
+
+  .avatar-container {
+    display: none;
+  }
+
+  .post-container {
+    border: none;
+    width: 100%;
+  }
+
+  .stories-container {
+    margin-right: 15px;
+    font-family: Noto Sans, sans-serif;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  #time-ago {
+    display: none;
+  }
+
+  #name-account {
+    margin: 2px 0 0 0;
+  }
+
+  .top-second-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 723px) {
+  .feed-container {
+    background: #fafafa;
+  }
+
+  .cols-container {
+    margin: 0 auto;
+    padding-top: 3em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    max-width: 935px;
+  }
+
+  .stories-container {
+    margin-right: 15px;
+    font-family: Noto Sans, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+
+  .col1 {
+    width: 66%;
+  }
+
+  .col2 {
+    width: 33%;
+    padding: 5px;
+    /* background: blue; */
+    margin-left: 3%;
+    position: sticky;
+
+    top: 0; /* required */
+    height: 100%;
+    z-index: 1;
+  }
+
+  .avatar-container {
+    width: 100%;
+    height: 5.1em;
+    display: flex;
+    padding: 0 0 0 5%;
+    align-items: center;
+  }
+
+  .second-bar-container {
+    border: 1px solid #dbdbdb;
+    border-radius: 0.5%;
+    background: white;
+    height: 40vh;
+    overflow-y: scroll;
+  }
+
+  .user-info {
+    margin: 0 0 0 10px;
+  }
+
+  .post-container {
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    margin-bottom: 10%;
+    border-radius: 0.5%;
+    background: white;
+  }
+
+  #time-ago {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 10px;
+    color: rgba(var(--f52, 153, 153, 153), 1);
+  }
+
+  #name-account {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: "12px";
+  }
+
+  .top-second-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 13px;
+  }
+
+  .insta-name {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .real-name {
+    color: rgba(var(--f52, 153, 153, 153), 1);
+    font-size: 12px;
+    margin-top: 2%;
+  }
+
+  .watch-all {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .stories {
+    color: rgba(var(--f52, 153, 153, 153), 1);
+  }
+}

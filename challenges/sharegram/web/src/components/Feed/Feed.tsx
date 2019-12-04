@@ -1,5 +1,6 @@
 import * as React from "react";
-import { graphql } from "react-apollo";
+import { useQuery } from "@apollo/react-hooks";
+
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
@@ -7,20 +8,24 @@ import { FaEllipsisH } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import SecondBar from "../SecondBar/SecondBar";
 import { feed, users } from "../../dummyDatta.js";
-import { getFeed } from "../../queries/queries";
+import { GET_FEED } from "../../queries/queries";
 
 function Feed(props) {
-  let infoData = props.data.getFeed;
+  const { loading, error, data } = useQuery(GET_FEED);
+
+  if (loading) return "Loading...";
+  if (error) return "Something Bad Happened";
+
   return (
     <div
       className="cols-container"
       style={{ fontFamily: "Noto Sans, sans-serif" }}
     >
       <div className="col1">
-        {props.data.loading ? (
+        {loading ? (
           <div>Loading...</div>
         ) : (
-          infoData.map((user, ind) => {
+          data.getFeed.map((user, ind) => {
             return user.posts.map((post, ind) => {
               return (
                 <div key={ind} className="post-container">
@@ -144,4 +149,4 @@ function Feed(props) {
 }
 //AT 623 COL2 BECOMES ABSOLUTE AND COLS-CONTAINER POSITION IS RELATIVE
 
-export default graphql(getFeed)(Feed);
+export default Feed;

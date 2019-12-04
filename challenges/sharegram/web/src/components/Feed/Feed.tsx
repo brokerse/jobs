@@ -11,7 +11,6 @@ import { getFeed } from "../../queries/queries";
 
 function Feed(props) {
   let infoData = props.data.getFeed;
-  console.log("this is props", props);
   return (
     <div
       className="cols-container"

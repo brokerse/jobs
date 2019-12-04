@@ -1,13 +1,12 @@
 import * as React from "react";
-import { feed, users } from "../../dummyDatta.js";
+import { graphql } from "react-apollo";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
 import { FaEllipsisH } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import SecondBar from "../SecondBar/SecondBar";
-import { marginBottom, background } from "styled-system";
-import { graphql } from "react-apollo";
+import { feed, users } from "../../dummyDatta.js";
 import { getFeed } from "../../queries/queries";
 
 function Feed(props) {
@@ -129,7 +128,7 @@ function Feed(props) {
 
               display: "inline-block"
             }}
-            src={feed[0].image}
+            src={users[3].avatar}
             alt=""
           />
           <div className="user-info">

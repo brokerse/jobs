@@ -1,11 +1,9 @@
-import { resolve } from "dns";
-
 // import { queryType, stringArg, makeSchema, objectType } from "nexus";
 // ... or using `require()`
 // import { GraphQLServer } from "graphql-yoga";
+// const { queryType, stringArg, makeSchema, objectType } = require("nexus");
 
 const { GraphQLServer } = require("graphql-yoga");
-// const { queryType, stringArg, makeSchema, objectType } = require("nexus");
 const graphql = require("graphql");
 const {
   GraphQLObjectType,
@@ -25,7 +23,7 @@ const feed = [
     small:
       "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/instagram-clone/small/1.jpeg",
     aspectRatio: 0.834,
-    description: "Working hard at a Projects!",
+    description: "Working hard at a Project!",
     authorId: 1
   },
   {
@@ -372,7 +370,6 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         args.id = Number(args.id);
         let result = _.find(feed, { id: args.id });
-        console.log("=================", result);
         return result;
       }
     },

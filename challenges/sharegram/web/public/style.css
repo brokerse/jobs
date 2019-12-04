@@ -9,18 +9,12 @@
   justify-content: space-between;
 }
 
-@media (min-width: 723px) {
-  .header-content {
-    max-width: 923px;
-    margin: 0 auto;
-  }
-}
-
 @media (max-width: 723px) {
   .col2 {
     position: absolute;
     top: -15px;
-    z-index: 2;
+    /* z-index: 2; */
+    width: 100%;
   }
 
   .cols-container {
@@ -59,11 +53,20 @@
   .top-second-bar {
     display: none;
   }
+
+  .second-bar-container {
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width: 723px) {
   .feed-container {
     background: #fafafa;
+  }
+
+  .header-content {
+    max-width: 923px;
+    margin: 0 auto;
   }
 
   .cols-container {

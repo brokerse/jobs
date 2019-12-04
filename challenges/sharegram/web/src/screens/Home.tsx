@@ -4,7 +4,6 @@ import Header from "../components/Header/Header";
 import Feed from "../components/Feed/Feed";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import { gql } from "apollo-boost";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000"

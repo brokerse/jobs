@@ -1,10 +1,9 @@
 import * as React from "react";
-
 import Row2 from "../Row/Row2";
-import SVG from "../SVG/SVG";
 import { feed, users } from "../../dummyDatta.js";
 import Box from "../Box/Box";
-import { marginBottom } from "styled-system";
+
+const filteredUsers = users.filter(user => user.id !== 4);
 
 const SecondBar = () => (
   <Row2
@@ -22,7 +21,7 @@ const SecondBar = () => (
       <p className="stories">Stories</p>
       <p className="watch-all">Watch All</p>
     </div>
-    {feed.map((pic, ind) => {
+    {filteredUsers.map((user, ind) => {
       return (
         <Box
           key={ind}
@@ -33,7 +32,7 @@ const SecondBar = () => (
         >
           <div className="stories-container">
             <img
-              src="https://avatars2.githubusercontent.com/u/16545335?s=50&v=4"
+              src={user.avatar}
               alt=""
               style={{
                 borderRadius: "50%",
@@ -49,7 +48,7 @@ const SecondBar = () => (
                 marginLeft: "1.2em"
               }}
             >
-              <p id="name-account">{users[0].name}</p>
+              <p id="name-account">{user.name}</p>
               <p id="time-ago">{Math.round(Math.random() * 24)} HOURS AGO</p>
             </div>
           </div>
